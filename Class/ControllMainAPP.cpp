@@ -1,4 +1,6 @@
 #include "ControllMainAPP.h"
+#include <QDebug>
+
 ControllMainAPP* ControllMainAPP::m_instance = nullptr;
 void ControllMainAPP::initControlMainApp()
 {
@@ -19,4 +21,10 @@ ControllMainAPP *ControllMainAPP::getInstance()
 ControllMainAPP::ControllMainAPP()
 {
 
+}
+
+void ControllMainAPP::handleHMIEvent(QString str1, QString str2)
+{
+    qDebug() << str1;
+    qDebug() << str2;
 }

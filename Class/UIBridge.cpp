@@ -1,9 +1,9 @@
 #include "UIBridge.h"
 #include <QDebug>
 
-UIBridge::UIBridge(QObject* i3lWindows) : QObject(i3lWindows) {
-    connect(this, SIGNAL(hmiEvent(QString,QString)), i3lWindows, SLOT(handleHMIEvent(QString,QString)));
+UIBridge::UIBridge(QObject* appWindown) : QObject(appWindown) {
+    connect(this, SIGNAL(hmiEvent(QString,QString)), appWindown, SLOT(handleHMIEvent(QString,QString)));
 }
 void UIBridge::log(QString message) {
-    qDebug() << "hunght abcd";
+    emit hmiEvent(message, "vlvlvlvlvlvlvlv");
 }

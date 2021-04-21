@@ -17,6 +17,9 @@ private:
     QObject* m_mainWindow = nullptr;
 
     UIBridge* m_uiBridge = nullptr;
+
+public slots:
+    void handleHMIEvent(QString str1, QString str2);
 };
 
 #endif // CONTROLLMAINAPP_H

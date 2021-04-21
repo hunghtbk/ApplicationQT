@@ -7,8 +7,11 @@ class UIBridge: public QObject
 {
     Q_OBJECT
 public:
-    explicit UIBridge(QObject *i3lWindows = nullptr);
+    explicit UIBridge(QObject *appWindown = nullptr);
     Q_INVOKABLE void log(QString message);
+
+signals:
+    void hmiEvent(QString, QString);
 };
 
 #endif // UIBRIDGE_H
